@@ -230,3 +230,148 @@ footer p {
 .footer-links a:hover {
   color: #ffffff;
 }
+
+/* DARK MODE */
+body.dark-mode {
+  background-color: #1a1a2e;
+  color: #eaeaea;
+}
+
+body.dark-mode nav {
+  background-color: #16213e;
+  border-bottom: 1px solid #0f3460;
+}
+
+body.dark-mode #hero {
+  background-color: #16213e;
+}
+
+body.dark-mode #about {
+  background-color: #1a1a2e;
+}
+
+body.dark-mode #about h2,
+body.dark-mode #projects h2,
+body.dark-mode .project-card h3,
+body.dark-mode #hero h1 {
+  color: #eaeaea;
+}
+
+body.dark-mode #projects {
+  background-color: #16213e;
+}
+
+body.dark-mode .project-card {
+  background-color: #1a1a2e;
+}
+
+body.dark-mode .about-skills ul li {
+  background-color: #16213e;
+  color: #eaeaea;
+}
+
+/* SCROLL ANIMATIONS */
+section {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ACTIVE NAV LINK */
+nav ul li a.active {
+  color: #2980b9;
+  font-weight: bold;
+  border-bottom: 2px solid #2980b9;
+}
+
+/* NAV CONTROLS */
+.nav-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+#theme-toggle {
+  padding: 8px 16px;
+  border: 1px solid #2980b9;
+  border-radius: 20px;
+  background: transparent;
+  color: #333;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+body.dark-mode #theme-toggle {
+  color: #eaeaea;
+}
+
+/* HAMBURGER - hidden on desktop */
+#hamburger {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #333;
+}
+
+body.dark-mode #hamburger {
+  color: #eaeaea;
+}
+
+/* BACK TO TOP BUTTON */
+#back-to-top {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  background-color: #2980b9;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 46px;
+  height: 46px;
+  font-size: 20px;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+#back-to-top.show {
+  opacity: 1;
+}
+
+/* HAMBURGER MENU - mobile */
+@media (max-width: 768px) {
+  #hamburger {
+    display: block;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+
+  body.dark-mode nav ul {
+    background-color: #16213e;
+  }
+
+  nav ul.open {
+    display: flex;
+  }
+
+  nav ul li {
+    padding: 10px 0;
+  }
+}
